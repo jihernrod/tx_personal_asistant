@@ -1,11 +1,6 @@
-
-import os
-
-
-
 from agents import Agent, InputGuardrail, FileSearchTool, Runner
 import asyncio
-import guardrails
+from . import guardrails
 
 REPSOL = "Repsol S.A"
 IBERDROLA = "Iberdrola"
@@ -65,4 +60,8 @@ async def chat(msg):
 
 
 if __name__ == "__main__":
+
+    from config import prop as cfg
+    import os
+    os.environ['OPENAI_API_KEY'] = cfg.secrets().api_key
     asyncio.run(chat("Hazme un resumen del informe financiero de resultados de Repsol"))

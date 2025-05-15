@@ -1,0 +1,5 @@
+.idea/
+tx_agents/__pycache__/
+metaclases/__pycache__/
+config/__pycache__/
+api/__pycache__/
