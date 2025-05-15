@@ -4,7 +4,7 @@ from telegram import Bot
 import chatbot
 
 CHAT_ID = 5224270604
-API_TOKEN = '7922946027:AAFeKpf6V0ci2q8luAHAZydlXvLhDtNKD6E'
+
 
 bot = Bot(token=API_TOKEN)
 
