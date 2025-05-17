@@ -1,9 +1,12 @@
 from agents import Agent, InputGuardrail, FileSearchTool, Runner
 import asyncio
 from . import guardrails
+from config import prop
 
-REPSOL = "Repsol S.A"
-IBERDROLA = "Iberdrola"
+DEFAULT_MODEL : str = prop.models().default_model
+
+REPSOL : str = "Repsol S.A"
+IBERDROLA : str  = "Iberdrola"
 
 LIST_COMPANY = [REPSOL, IBERDROLA]
 
@@ -24,7 +27,7 @@ No debes inventarte nada.
 En caso de no tener informacion de la Tool debes decir que no sabes nada de esa empresa
 """
 
-DEFAULT_MODEL = "gpt-4o-mini-2024-07-18"
+
 
 def create_financial_agent(company):
      return Agent(
